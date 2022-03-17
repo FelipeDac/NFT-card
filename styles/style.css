@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:ital,wght@0,200;0,400;0,700;1,100&display=swap');
+
+:root {
+    /*Primary*/
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /*Neutral*/
+    --main-dark-blue: hsl(217, 54%, 11%);
+    --card-dark-blue: hsl(216, 50%, 16%);
+    --line-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+img {
+  max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 1.25rem;
+    background-color: var(--card-dark-blue);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+body {
+    padding-top: 50px;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--main-dark-blue);
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 1.25;
+}
+
+.nft-image {
+    position: relative;
+}
+
+.nft-image div{
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nft-image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.nft-image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#nft-code {
+    color: var(--white);
+    margin: 1rem 0.5rem 0.5rem 0;
+}
+
+#nft-code:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+#price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line-dark-blue);
+}
+
+price p {
+    display: flex;
+    align-items: center;
+}
+
+#price p:first-child{
+    color: var(--cyan)
+}
+
+.creation-of {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-top: 2rem;
+}
+
+.creation-of img {
+    width: 3.5rem;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.creation-of span {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.creation-of span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 16px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.description .creation-of {
+    font-weight: 300;
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 450px;
+        margin: 0 auto 1rem;
+    }
+}
+
